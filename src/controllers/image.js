@@ -2,12 +2,12 @@ const path = require('path');
 const { randomNumber } = require('../helpers/libs');
 const fs = require('fs-extra');
 
-const { Image } = require('../models/');
+const { Image } = require('../models');
 
 const ctrl = {};
 
 ctrl.index = (req,res) => {
-
+    
 };
 
 ctrl.create =  (req,res) => {
