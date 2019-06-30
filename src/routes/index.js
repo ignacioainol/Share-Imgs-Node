@@ -2,7 +2,7 @@ const express = require('express');
 const router = express.Router();
 
 // Controllers
-const home = require('../controllers/home').default.default;
+const home = require('../controllers/home');
 const image = require('../controllers/image');
 
 module.exports = app => {

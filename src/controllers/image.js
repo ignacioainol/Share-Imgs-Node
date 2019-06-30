@@ -7,7 +7,7 @@ const { Image } = require('../models');
 const ctrl = {};
 
 ctrl.index = (req,res) => {
-    
+    res.render("image");
 };
 
 ctrl.create =  (req,res) => {
@@ -16,7 +16,7 @@ ctrl.create =  (req,res) => {
         const imgUrl = randomNumber();
         const images = await Image.find({filename: imgUrl});
         if(images.length > 0){
-            saveImage();   
+            saveImage();
         }else{
             console.log(imgUrl);
             const imageTempPath = req.file.path;
@@ -43,8 +43,6 @@ ctrl.create =  (req,res) => {
     };
 
     saveImage();
-
-    
 };
 
 ctrl.like = (req,res) => {
