@@ -1,3 +1,9 @@
+$('#post-comment').hide();
+$('#btn-toggle-comment').on('click',function(e){
+    $('#post-comment').slideToggle();
+
+    return false;
+})
 $('#btn-like').on('click',function(e){
     let imgId = $(this).data('id');
 
